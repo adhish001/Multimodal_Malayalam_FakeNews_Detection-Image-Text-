@@ -18,6 +18,10 @@ from tensorflow.keras.models import Model
 from keras.preprocessing.text import Tokenizer
 import os
 import PIL
+import nltk
+nltk.download('punkt')
+
+
 
 
 
