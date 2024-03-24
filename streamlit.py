@@ -132,8 +132,6 @@ if page == "Home":
     st.write("Through our user-friendly interface, simply input the text and the corresponding image associated with the news article you want to verify. Our advanced algorithms then meticulously analyze both the textual and visual components to determine the authenticity of the news.")
     st.write("Say goodbye to misinformation. Empower yourself with truth!")
    
-
-
 elif page == "Predict Fake News":
     st.header("Predict Fake News")
     st.sidebar.success("Please input text and upload an image to predict.")
