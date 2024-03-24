@@ -115,7 +115,7 @@ def predict_external_data(text_data, image_paths):
     return external_predicted_labels
 
 # Streamlit app
-st.title("Multimodal Fake News Detection")
+st.title("Multimodal Fake News Detection in Malayalam")
 st.sidebar.header("Navigation")
 
 # Page selection
