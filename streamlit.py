@@ -121,7 +121,7 @@ st.sidebar.header("Navigation")
 # Page selection
 page = st.sidebar.radio("Go to", ("Main Page", "Predict Fake News"))
 
-selected_model = st.sidebar.selectbox("Select Model", ["fusion_model.h5", "fusion__model.h5", "fUsionn_model.h5"])
+selected_model = st.sidebar.selectbox("Select Model", ["fusion_model_01.h5", "fusion__model.h5", "fUsionn_model_02.h5"])
 fusion_model = load_model(selected_model)
 
 if page == "Main Page":
