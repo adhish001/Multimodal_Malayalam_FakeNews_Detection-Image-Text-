@@ -134,7 +134,7 @@ if page == "Main Page":
 
     # Option to show an image
     if st.checkbox("Show Image"):
-        st.image("your_image.jpg", caption="Your Image Caption")
+        st.image("image_Fact.jpg")
 
 
 elif page == "Predict Fake News":
