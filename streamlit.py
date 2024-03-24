@@ -116,30 +116,45 @@ def predict_external_data(text_data, image_paths):
 
 # Streamlit app
 st.title("Multimodal Fake News Detection")
+st.sidebar.header("Navigation")
 
-# Text input for news headline
-st.header("Text Input")
-text_input = st.text_area("Enter the text", value="")
+# Page selection
+page = st.sidebar.radio("Go to", ("Main Page", "Predict Fake News"))
 
-# Image upload for news image
-st.header("Image Input")
-image_upload = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
+selected_model = st.sidebar.selectbox("Select Model", ["fusion_model.h5", "fusion__model.h5", "fUsionn_model.h5"])
+fusion_model = load_model(selected_model)
 
-# Make prediction when the user clicks the "Predict" button
-if st.button("Predict"):
-    if text_input == "":
-        st.warning("Please enter text data.")
-    elif image_upload is None:
-        st.warning("Please upload an image.")
-    else:
-        # Read and preprocess the uploaded image
-        image = Image.open(image_upload)
-        image_paths = ["uploaded_image.png"]
-        image.save(image_paths[0])
+if page == "Main Page":
+    st.header("Main Page Content")
+    st.write("This is the main page. Use the sidebar to navigate.")
 
-        # Predict using the provided text and image
-        predicted_labels = predict_external_data(text_input, image_paths)
+elif page == "Predict Fake News":
+    st.header("Predict Fake News")
+    st.sidebar.success("Please input text and upload an image to predict.")
 
-        category = {0:"The Given News is fake", 1: "The given News is True"}
-        result = category[predicted_labels[0]]
-        st.success(f"Predicted Label: {result}")
+    # Text input for news headline
+    st.subheader("Text Input")
+    text_input = st.text_area("Enter the text", value="")
+
+    # Image upload for news image
+    st.subheader("Image Input")
+    image_upload = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
+
+    # Make prediction when the user clicks the "Predict" button
+    if st.button("Predict"):
+        if text_input == "":
+            st.warning("Please enter text data.")
+        elif image_upload is None:
+            st.warning("Please upload an image.")
+        else:
+            # Read and preprocess the uploaded image
+            image = Image.open(image_upload)
+            image_paths = ["uploaded_image.png"]
+            image.save(image_paths[0])
+
+            # Predict using the provided text and image
+            predicted_labels = predict_external_data(text_input, image_paths)
+
+            category = {0:"The Given News is fake", 1: "The given News is True"}
+            result = category[predicted_labels[0]]
+            st.success(f"Predicted Label: {result}")
