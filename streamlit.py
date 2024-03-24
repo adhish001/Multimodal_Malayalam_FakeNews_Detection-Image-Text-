@@ -129,12 +129,10 @@ if page == "Main Page":
     st.write("Welcome to our Multimodal Fake News Detection WebApp!")
     st.write("Detecting fake news in the Malayalam language has become increasingly challenging in today's digital age. With the rapid spread of misinformation and manipulated content, distinguishing between truth and falsehood has never been more crucial.")
     st.write("Our innovative web application tackles this problem head-on by utilizing the power of both text and image modalities. We understand that fake news often involves not just misleading text but also manipulated visuals, making it imperative to analyze both aspects simultaneously.")
+    st.image("fake_banner01.jpg")
     st.write("Through our user-friendly interface, simply input the text and the corresponding image associated with the news article you want to verify. Our advanced algorithms then meticulously analyze both the textual and visual components to determine the authenticity of the news.")
     st.write("Say goodbye to misinformation. Empower yourself with truth!")
-
-    # Option to show an image
-    if st.checkbox("Show Image"):
-        st.image("image_Fact.jpg")
+   
 
 
 elif page == "Predict Fake News":
