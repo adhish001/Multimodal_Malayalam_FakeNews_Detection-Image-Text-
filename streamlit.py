@@ -125,11 +125,11 @@ selected_model = st.sidebar.selectbox("Select Model", ["fusion_model_01.h5", "fu
 fusion_model = load_model(selected_model)
 
 if page == "Main Page":
-    st.header("Welcome to our Multimodal Fake News Detection WebApp!")
+    st.header("സ്വാഗതം!......")
     st.write("ഇന്നത്തെ ഡിജിറ്റൽ യുഗത്തിൽ മലയാള ഭാഷയിലെ വ്യാജവാർത്തകൾ കണ്ടെത്തുന്നത് കൂടുതൽ വെല്ലുവിളിയായി മാറിയിരിക്കുകയാണ്. തെറ്റായ വിവരങ്ങളുടെയും കൃത്രിമ ഉള്ളടക്കത്തിൻ്റെയും ദ്രുതഗതിയിലുള്ള വ്യാപനത്തോടെ, സത്യവും അസത്യവും തമ്മിൽ വേർതിരിച്ചറിയുന്നത് ഒരിക്കലും സാധ്യമായിരുന്നില്ല.")
     st.image("fake_banner01.jpg")
-    st.write("Our innovative web application tackles this problem head-on by utilizing the power of both text and image modalities. We understand that fake news often involves not just misleading text but also manipulated visuals, making it imperative to analyze both aspects simultaneously.")
-    st.write("Through our user-friendly interface, simply input the text and the corresponding image associated with the news article you want to verify. Our advanced algorithms then meticulously analyze both the textual and visual components to determine the authenticity of the news.")
+    st.write("ഞങ്ങളുടെ നൂതന വെബ് ആപ്ലിക്കേഷൻ ടെക്‌സ്‌റ്റിൻ്റെയും ഇമേജ് രീതികളുടെയും ശക്തി ഉപയോഗിച്ച് ഈ പ്രശ്‌നം നേരിട്ട് പരിഹരിക്കുന്നു. വ്യാജവാർത്തകളിൽ പലപ്പോഴും തെറ്റിദ്ധരിപ്പിക്കുന്ന വാചകം മാത്രമല്ല, കൃത്രിമ ദൃശ്യങ്ങളും ഉപയോഗിക്കുന്നു, ഇത് രണ്ടും ഒരേസമയം വിശകലനം ചെയ്യേണ്ടത് അത്യന്താപേക്ഷിതമാണ്.")
+    st.write("ഞങ്ങളുടെ ഉപയോക്തൃ-സൗഹൃദ ഇൻ്റർഫേസിലൂടെ, നിങ്ങൾ സ്ഥിരീകരിക്കാൻ ആഗ്രഹിക്കുന്ന വാർത്താ ലേഖനവുമായി ബന്ധപ്പെട്ട വാചകവും അനുബന്ധ ചിത്രവും ഇൻപുട്ട് ചെയ്യുക. വാർത്തയുടെ ആധികാരികത നിർണ്ണയിക്കാൻ ഞങ്ങളുടെ വിപുലമായ അൽഗോരിതങ്ങൾ ടെക്‌സ്‌റ്റൽ, വിഷ്വൽ ഘടകങ്ങളെ സൂക്ഷ്മമായി വിശകലനം ചെയ്യുന്നു.")
     st.write("Say goodbye to misinformation. Empower yourself with truth!")
     
 
